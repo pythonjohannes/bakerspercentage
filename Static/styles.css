@@ -1,0 +1,201 @@
+html, body {
+    width: 100%
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100% auto;}
+
+ol {
+    text-align: left;
+}
+
+li {
+    margin-bottom: 15%
+}
+
+.ingredients {
+    display: inline;
+    font-size: 1.7vw
+}
+
+.pizza-result {
+     height: 100%;
+     width: 80%;
+     color: white;
+     margin: auto;
+     text-align: center
+}
+
+.result-text {
+    position: absolute;
+    margin: 8% 30%;
+    font-size: 1.5vw
+   }
+
+.pizza-img {
+    display: block;
+    height: auto;
+    width: 26%;
+    margin: auto;
+    margin-top: 5%;
+    text-align:center
+   }
+
+
+.ans-form {
+    height: 40%
+}
+
+.surdeg-form {
+margin: 10% 35%;
+    color: white}
+
+.pizza-form {
+    color: black;
+    margin: 10% 35%;}
+
+.pizza-title-text {
+    font-size:5vw;
+    margin:8% 16%;
+    color:black;
+    position: absolute;}
+
+.surdeg-title-text {
+    font-size:5vw;
+    text-align:center;
+    margin: 8% 61%;
+    color:black;
+    position: absolute;
+    }
+
+.chooser-pizza-img {
+    position: absolute;
+    height: 50%;
+    margin: 15% 5%
+    }
+
+.chooser-surdeg-img {
+    position: absolute;
+    height: 50%;
+    margin: 15% 55%
+    }
+
+
+@media (max-width: 1200px) {
+    .pizza-img {
+    width:40%}
+    .result-text {
+     font-size: 2.7vw;
+     margin: 10% 23%}
+    .ingredients {
+    font-size: 2.5vw
+}
+    .pizza-title-text {
+    font-size:6vw;
+    position: static;
+    text-align: center;
+    margin: 0}
+
+.surdeg-title-text {
+    font-size:6vw;
+    position: static;
+    text-align: center;
+    margin: 0
+    }
+
+.chooser-pizza-img {
+    width: 55%;
+    position: static;
+    margin: 1% auto 5% auto;
+    display: block;
+    }
+
+.chooser-surdeg-img {
+    width: 55%;
+    position: static;
+    margin: 1% auto;
+    display: block;
+    }
+
+        .surdeg-form {
+     color:white;
+     margin: 5% 15% 0% 15%;}
+    .pizza-form {margin: 5% 15% 0% 15%; color:white}
+
+
+}
+
+@media (max-width: 830px) {
+.surdeg-form {
+     color:black;
+     margin: 75% 15% 0% 15%;}
+    .pizza-form {margin: 75% 15% 0% 15%; color:black}
+}
+
+@media (max-width: 600px) {
+
+    .pizza-title-text {
+    font-size:11vw;
+    text-align:center;
+    margin:12% 0 0 0;
+    color:black;
+    position: static;}
+
+.surdeg-title-text {
+    font-size:11vw;
+    text-align:center;
+    margin: 12% 0 0 0;
+    color:black;
+    position: static;
+    }
+
+.chooser-pizza-img {
+    position: static;
+    width: 100%;
+    margin: 0
+    }
+
+.chooser-surdeg-img {
+    position: static;
+    width: 100%;
+    margin: 0
+    }
+
+
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    .surdeg-form {
+     color:black;
+     margin: 80% 15% 0% 15%;}
+    .pizza-form {margin: 80% 15% 0% 15%; color:black}
+    .pizza-img {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    margin-top: 75%;
+    text-align: center;
+   }
+
+   .pizza-result {
+   width:100%}
+
+   .result-text {
+    position: absolute;
+    margin: 20% 12% 0% 12%;
+    font-size: 7vw}
+    .ingredients {
+    display: inline;
+    font-size: 7vw
+}
+
+   }
+
+
+
+}

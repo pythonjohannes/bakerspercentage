@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    {% import "bootstrap/wtf.html" as wtf %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+    <style>
+        body {
+        background-image: url({{url_for('static', filename=bild)}});
+        }
+    </style>
+<body>
+    {% if form.validate_on_submit() %}
+<div class="pizza-result">
+    <div class="result-text">
+        {% for ingredient in result%}
+        <ol style="list-style-type:none;">
+            <li>{{result[ingredient]["icon"] | safe}} <div class="ingredients">{{ingredient}}:</div> &nbsp;&nbsp; {{result[ingredient]["vikt"]}} gram</li>
+        </ol>
+
+        {% endfor %}
+
+
+
+    </div>
+    </div>
+    <img  class="pizza-img" src="{{url_for('static', filename='vintage 2.png')}}">
+
+
+</div>
+
+    {% else %}
+
+        {% if title=="Surdeg" %}
+        <div class="surdeg-form" styles="
+        margin-top:5%;">
+
+        {% elif title=="Pizza" %}
+        <div class="pizza-form" styles="
+        margin-top:5%;">
+
+        {%endif%}
+<!--    <div class="container"></div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-5 col-sm-2"></div>-->
+<!--            <div class="col-lg-2 col-sm-8 ans-form">-->
+        {{wtf.quick_form(form, button_map={"submit": "info"})}}</div>
+
+
+<!--            <div class="col-lg-5 col-sm 2"></div>-->
+<!--        </div>-->
+
+        {% endif %}
+    </div>
+</body>
+</html>
