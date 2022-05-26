@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <a style=" text-decoration:none" href={{url_for("pizza")}}><h1 class="pizza-title-text">PIZZA</h1><img class="chooser-pizza-img" src="/static/pizza_3.jpg"> </a>
+    <a style=" text-decoration:none" href={{url_for("pizza")}}><h1 class="pizza-title-text">PIZZA</h1><img class="chooser-pizza-img" src="{{url_for('static',filename='pizza_3.jpg')}}"> </a>
 
     <a  style=" text-decoration:none" href={{url_for("sourdough")}}><h1 class="surdeg-title-text">SURDEG</h1> <img class="chooser-surdeg-img" src="/static/sourdough.jpg"> </a>
 </body>
