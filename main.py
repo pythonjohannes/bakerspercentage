@@ -68,9 +68,10 @@ def sourdough():
 	form = Surdeg(antal_bröd=1, gram_mjöl=450, salt=2.2, hydration=72, surdeg=10)
 	if form.validate_on_submit():
 		regnmätare_vikt = 0
+		regnmätare_mjöl = 0
 		if form.regnmätare.data:
 			regnmätare_mjöl = 55/((100+form.hydration.data+form.salt.data+form.surdeg.data)/100)
-		mjöl_vikt = form.gram_mjöl.data
+		mjöl_vikt = form.gram_mjöl.data + regnmätare_mjöl
 		result['Surdeg']["Mjöl"]["vikt"] = str(int(mjöl_vikt))
 		result['Surdeg']["Vatten"]["vikt"] = str(int(mjöl_vikt*(form.hydration.data/100)))
 		result['Surdeg']["Surdeg"]["vikt"] = str(int(mjöl_vikt * (form.surdeg.data/100)))
